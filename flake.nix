@@ -14,11 +14,10 @@
       in
       {
         overlays = overlays;
-        devShell = pkgs.mkShell {
-          buildInputs = [
-            pkgs.idris2-nightly
-            pkgs.idris2-lsp
-          ];
+      }) // {
+        defaultTemplate = {
+          path = ./template;
+          description = "An Idris2 flake with LSP";
         };
-      });
+      };
 }
