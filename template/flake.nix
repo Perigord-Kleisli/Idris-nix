@@ -25,15 +25,13 @@
           meta = { };
         };
 
-        devShell = with pkgs; mkShell {
-          packages = with pkgs; [
-            idris2-nightly
-            idris2-lsp
-          ];
-          shellHook = with pkgs; ''
-            eval "$(idris2 --bash-completion-script idris2)"
-            export IDRIS2_PACKAGE_PATH=${idris2-nightly.name}:$IDRIS2_PACKAGE_PATH
-          '';
+        devShell = with pkgs; idris-nix.mkShell.${system} {
+
+          #For all your command-line tools
+          packages = [ idris2-lsp ];
+
+          #For the Idris libraries that are dependencies
+          idris2Deps = [];
         };
       });
 }
