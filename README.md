@@ -64,3 +64,8 @@ A bunch of overlays for Idris2
       });
 }
 ```
+
+A simple template can be made via
+```
+nix flake init -t github:Trouble-Truffle/Idris-nix
+```
