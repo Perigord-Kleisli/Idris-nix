@@ -7,7 +7,7 @@ A bunch of overlays for Idris2
   description = "A toy language";
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    idris-nix.url = "github:Trouble-Truffle/Idris-nix";
+    idris-nix.url = "github:Perigord-Kleisli/Idris-nix";
   };
 
   outputs = { self, nixpkgs, flake-utils, idris-nix, ... }:
@@ -48,5 +48,5 @@ A bunch of overlays for Idris2
 
 A template is available via
 ```
-nix flake init -t github:Trouble-Truffle/Idris-nix
+nix flake init -t github:Perigord-Kleisli/Idris-nix
 ```

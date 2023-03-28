@@ -22,8 +22,8 @@ build-idris2-package rec {
   src = fetchFromGitHub {
     owner = "stefan-hoeck";
     repo = "idris2-pack";
-    rev = "b0437a98dfac0e3ead84110ffc2ee9c72dc03896";
-    sha256 = "+70N3zb2Nzj7I3K46783/gGNGUVNrKw6IGmeopqfWEM=";
+    rev = "43c6f09de6958612bf5981d0aa212290332ca7a1";
+    sha256 = "L7x63aichvuFNxVPD9da+1yOcByGxhZf1TQnCt45HVo=";
   };
 
   meta = {
