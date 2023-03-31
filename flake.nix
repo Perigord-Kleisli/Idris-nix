@@ -30,7 +30,7 @@
             program = "${packages.pack}/bin/pack";
           };
       };
-      overlays = overlays;
+      inherit overlays;
       mkShell = {
         name ? "nix-shell",
         packages ? [],
