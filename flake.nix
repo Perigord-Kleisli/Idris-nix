@@ -8,7 +8,6 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     flake-utils,
     idris2,
@@ -16,12 +15,21 @@
   }:
     flake-utils.lib.eachDefaultSystem
     (system: let
-      overlays = (import ./overlays) {idris2-nightly = idris2.defaultPackage.${system}; };
+      overlays = (import ./overlays) {idris2-nightly = idris2.defaultPackage.${system};};
       pkgs = import nixpkgs {
         inherit system;
         overlays = [overlays];
       };
-    in {
+    in rec {
+      packages = {
+        pack = pkgs.idris2-pack;
+      };
+      apps = {
+        pack = {
+            type = "app";
+            program = "${packages.pack}/bin/pack";
+          };
+      };
       overlays = overlays;
       mkShell = {
         name ? "nix-shell",
@@ -55,7 +63,6 @@
           inputsFrom = inputsFrom;
           shellHook = ''
             eval "$(idris2 --bash-completion-script idris2)"
-
             ${shellHook}
             export ${IDRIS2_PACKAGE_PATH}
           '';
