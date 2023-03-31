@@ -14,7 +14,7 @@ build-idris2-package rec {
     owner = "stefan-hoeck";
     repo = "idris2-sop";
     rev = "0726a1154b55ba0cefb885962a726c847b3d8d43";
-    sha256 = "hnybMKvZBQyxUcWcKBrZhkajp/m4yUAnz0GOkS6N7VI=";
+    sha256 = "r597XciwDqKDbh2i49J4dC7I/stGFwheNpU63wu1Mjo=";
   };
 
   idris2Deps = [ idris2-elab-util ];
