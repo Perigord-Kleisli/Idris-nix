@@ -1,3 +1,6 @@
+# Warning:
+This flake is not intended to be used in production environments and may soon be removed.
+
 # Idris-nix
 A bunch of overlays for Idris2
 

@@ -13,7 +13,7 @@ build-idris2-package rec {
   src = fetchFromGitHub {
     owner = "stefan-hoeck";
     repo = "idris2-sop";
-    rev = "2389da58fb453ecabed7acf0c5c0b4d723ad2d2f";
+    rev = "0726a1154b55ba0cefb885962a726c847b3d8d43";
     sha256 = "hnybMKvZBQyxUcWcKBrZhkajp/m4yUAnz0GOkS6N7VI=";
   };
 

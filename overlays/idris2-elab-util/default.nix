@@ -13,8 +13,8 @@ build-idris2-package rec {
   src = fetchFromGitHub {
     owner = "stefan-hoeck";
     repo = "idris2-elab-util";
-    rev = "6dd6956f343597c42864d0dd9d9985239f0e3f84";
-    sha256 = "GGH33E2RinsUuW2m33CrDQHMUaejYkSylvQbLxHkhA0=";
+    rev = "966a2f87c92b043d54b3710d3e86ad3667a8d615";
+    sha256 = "Ew31pmtRkHShgDYrNQHAHg+uEjM+EKqLwFFb1D/+G8I=";
   };
 
   meta = {
