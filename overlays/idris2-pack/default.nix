@@ -11,7 +11,7 @@
 , build-idris2-package
 }:
 
-build-idris2-package rec {
+build-idris2-package {
   pname = "idris2-pack";
   ipkgName = "pack";
   version = "0.0.1";

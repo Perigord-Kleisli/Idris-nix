@@ -1,6 +1,7 @@
 {idris2-nightly}: self: super: {
   # inherit idris2-nightly;
   idris2-nightly = super.callPackage ./idris2-with-api {idris2-bootstrap = idris2-nightly;};
+  lsp-lib = super.callPackage ./lsp-lib {};
   idris2-lsp = super.callPackage ./idris2-lsp {};
   idris-indexed = super.callPackage ./idris-indexed {};
   ncurses-idris = super.callPackage ./ncurses-idris {};
